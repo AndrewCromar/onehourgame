@@ -8,5 +8,5 @@
 zoom = Vector2(1.5, 1.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Camera2D" unique_id=37872159]
-z_index = -1
+z_index = -100
 texture = ExtResource("1_cjfub")

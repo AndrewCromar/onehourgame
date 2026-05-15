@@ -13,6 +13,7 @@ colors = PackedColorArray(0.6745098, 0.19607843, 0.19607843, 1, 0.6745098, 0.196
 script = ExtResource("1_md0e3")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1206238114]
+z_index = -1
 texture = ExtResource("2_md0e3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1085251826]
@@ -20,6 +21,8 @@ shape = SubResource("RectangleShape2D_md0e3")
 
 [node name="Particles" type="CPUParticles2D" parent="." unique_id=938057475]
 unique_name_in_owner = true
+z_index = -2
+emitting = false
 amount = 200
 lifetime = 10.0
 one_shot = true
@@ -30,7 +33,6 @@ spread = 180.0
 gravity = Vector2(0, 0)
 initial_velocity_min = 50.0
 initial_velocity_max = 100.0
-color = Color(0.6745098, 0.19607843, 0.19607843, 1)
 color_ramp = SubResource("Gradient_67neu")
 hue_variation_min = 0.36
 hue_variation_max = 0.36
