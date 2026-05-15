@@ -11,6 +11,11 @@ func _process(delta: float) -> void:
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("shield"):
 		_spawn_particles()
+		
+		var camera = get_tree().root.find_child("CameraContainer", true, false)
+		if camera:
+			camera.shake()
+		
 		queue_free()
 	elif area.is_in_group("player"):
 		area.take_damage(1)

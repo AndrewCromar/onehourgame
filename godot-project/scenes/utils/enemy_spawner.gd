@@ -4,7 +4,7 @@ extends Node2D
 
 const SPAWN_RATE : float = 1.0
 
-const SPWAN_RADIUS : float = 600
+const SPWAN_RADIUS : float = 300
 
 var counter : float = 0
 

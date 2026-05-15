@@ -11,3 +11,4 @@
 [node name="EnemySpawner" parent="." unique_id=179854735 instance=ExtResource("2_rwgxs")]
 
 [node name="CameraContainer" parent="." unique_id=1021875083 instance=ExtResource("3_4wyf3")]
+unique_name_in_owner = true
