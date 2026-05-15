@@ -1,15 +1,13 @@
 [gd_scene format=3 uid="uid://cm4aftjwe5wi4"]
 
-[ext_resource type="PackedScene" uid="uid://c13bgwgwbe8vj" path="res://scenes/player.tscn" id="1_rwgxs"]
-[ext_resource type="PackedScene" uid="uid://chuhrns84wer0" path="res://scenes/enemy.tscn" id="2_4wyf3"]
-[ext_resource type="Script" uid="uid://b7qthyyp6axeq" path="res://scenes/enemy_spawner.gd" id="2_k0juu"]
+[ext_resource type="PackedScene" uid="uid://c13bgwgwbe8vj" path="res://scenes/entities/player.tscn" id="1_rwgxs"]
+[ext_resource type="PackedScene" uid="uid://b6c6p1rxbawce" path="res://scenes/utils/enemy_spawner.tscn" id="2_rwgxs"]
+[ext_resource type="PackedScene" uid="uid://fd21r1dm3c53" path="res://scenes/utils/camera_container.tscn" id="3_4wyf3"]
 
 [node name="World" type="Node2D" unique_id=1815915779]
 
 [node name="Player" parent="." unique_id=1685806130 instance=ExtResource("1_rwgxs")]
 
-[node name="EnemySpawner" type="Node2D" parent="." unique_id=1772492400]
-script = ExtResource("2_k0juu")
-enemy_scene = ExtResource("2_4wyf3")
+[node name="EnemySpawner" parent="." unique_id=179854735 instance=ExtResource("2_rwgxs")]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=992220620]
+[node name="CameraContainer" parent="." unique_id=1021875083 instance=ExtResource("3_4wyf3")]
