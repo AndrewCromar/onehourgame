@@ -10,7 +10,17 @@ func _process(delta: float) -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("shield"):
+		_spawn_particles()
 		queue_free()
 	elif area.is_in_group("player"):
 		area.take_damage(1)
 		queue_free()
+
+func _spawn_particles() -> void:
+	var p = %Particles.duplicate()
+	get_parent().add_child(p)
+	p.global_position = global_position
+	p.emitting = true
+
+	await get_tree().create_timer(1.0).timeout
+	p.queue_free()

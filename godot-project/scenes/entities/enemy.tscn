@@ -5,6 +5,10 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_md0e3"]
 
+[sub_resource type="Gradient" id="Gradient_67neu"]
+offsets = PackedFloat32Array(0.38011697, 1)
+colors = PackedColorArray(0.6745098, 0.19607843, 0.19607843, 1, 0.6745098, 0.19607843, 0.19607843, 0)
+
 [node name="Enemy" type="Area2D" unique_id=1928511462]
 script = ExtResource("1_md0e3")
 
@@ -13,3 +17,20 @@ texture = ExtResource("2_md0e3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1085251826]
 shape = SubResource("RectangleShape2D_md0e3")
+
+[node name="Particles" type="CPUParticles2D" parent="." unique_id=938057475]
+unique_name_in_owner = true
+amount = 200
+lifetime = 10.0
+one_shot = true
+explosiveness = 1.0
+emission_shape = 3
+emission_rect_extents = Vector2(10, 10)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 100.0
+color = Color(0.6745098, 0.19607843, 0.19607843, 1)
+color_ramp = SubResource("Gradient_67neu")
+hue_variation_min = 0.36
+hue_variation_max = 0.36
