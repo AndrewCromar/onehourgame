@@ -12,7 +12,7 @@ config_version=5
 
 config/name="One Hour Game"
 config/description="Made this game in one hour(ish).s"
-config/version="v1"
+config/version="v1.1"
 run/main_scene="uid://d2lt5cxds81t4"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/bg_color=Color(0.14117648, 0.14117648, 0.14117648, 1)
@@ -22,6 +22,7 @@ config/icon="uid://bi7p0x4jldemq"
 
 [display]
 
+window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_width"
 mouse_cursor/custom_image="uid://dn6d4ybwemrig"
