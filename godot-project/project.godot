@@ -10,10 +10,18 @@ config_version=5
 
 [application]
 
-config/name="godot-project"
+config/name="One Hour Game"
+config/description="Made this game in 1 hour.s"
 run/main_scene="uid://cm4aftjwe5wi4"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_width"
+mouse_cursor/custom_image="uid://dn6d4ybwemrig"
+mouse_cursor/custom_image_hotspot=Vector2(8.5, 8.5)
 
 [physics]
 
