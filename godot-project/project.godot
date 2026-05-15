@@ -11,10 +11,14 @@ config_version=5
 [application]
 
 config/name="One Hour Game"
-config/description="Made this game in 1 hour.s"
-run/main_scene="uid://cm4aftjwe5wi4"
+config/description="Made this game in one hour(ish).s"
+config/version="v1"
+run/main_scene="uid://d2lt5cxds81t4"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0.14117648, 0.14117648, 0.14117648, 1)
+boot_splash/use_filter=false
+boot_splash/image="uid://bi7p0x4jldemq"
+config/icon="uid://bi7p0x4jldemq"
 
 [display]
 

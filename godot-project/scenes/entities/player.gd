@@ -1,14 +1,14 @@
 extends Node2D
 
+@export_file("*.tscn") var game_over_scene : String
+
 var health = 3
 
 func take_damage(amount: int):
 	health -= amount
-	print("Health left: ", health)
-	
+
 	if health <= 0:
 		die()
 
 func die():
-	print("Game Over!")
-	get_tree().reload_current_scene()
+	get_tree().call_deferred("change_scene_to_file", game_over_scene)

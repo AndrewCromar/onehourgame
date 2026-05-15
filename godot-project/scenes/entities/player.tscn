@@ -13,6 +13,7 @@ size = Vector2(10, 100)
 
 [node name="Player" type="Area2D" unique_id=2034433803 groups=["player"]]
 script = ExtResource("1_qhqgy")
+game_over_scene = "res://scenes/userinterface/game_over.tscn"
 
 [node name="Body" type="Sprite2D" parent="." unique_id=495163546]
 texture = ExtResource("2_dqkch")
