@@ -5,4 +5,4 @@
 - [ ] Sound effects.
 - [ ] Build and put on ONYX website and stuff (maybe steam eventually).
 - [x] Give player a gun to shoot with.
-- [x] Check shield controlls to wasd.
+- [x] Change shield controlls to wasd.
