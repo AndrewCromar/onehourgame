@@ -2,8 +2,9 @@ extends Node2D
 
 @export_file("*.tscn") var game_over_scene : String
 
-var health = 3
-var score = 0
+const max_health : float = 3
+var health : float = max_health
+var score : float = 0
 
 func take_damage(amount: int):
 	health -= amount
