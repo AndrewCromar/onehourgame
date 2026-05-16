@@ -5,11 +5,14 @@
 [ext_resource type="Script" uid="uid://dniom7j77brn2" path="res://scenes/entities/shield.gd" id="2_g2els"]
 [ext_resource type="Texture2D" uid="uid://eqiakl81k2o2" path="res://assets/shield.png" id="4_dqkch"]
 [ext_resource type="Texture2D" uid="uid://rf4mbrvaxag4" path="res://assets/playerbase.png" id="5_5u6hq"]
+[ext_resource type="Script" uid="uid://cho3a0sd4gxwu" path="res://scenes/entities/gun.gd" id="6_d4qa6"]
+[ext_resource type="PackedScene" uid="uid://bf4ilh4r73r2q" path="res://scenes/entities/bullet.tscn" id="7_ss7kx"]
+[ext_resource type="Texture2D" uid="uid://rj5hyp3bmlae" path="res://assets/gun.png" id="8_dnykm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8vuu"]
 size = Vector2(10, 100)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
 
 [node name="Player" type="Area2D" unique_id=2034433803 groups=["player"]]
 script = ExtResource("1_qhqgy")
@@ -17,6 +20,14 @@ game_over_scene = "res://scenes/userinterface/game_over.tscn"
 
 [node name="Body" type="Sprite2D" parent="." unique_id=495163546]
 texture = ExtResource("2_dqkch")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1391303977]
+shape = SubResource("RectangleShape2D_qhqgy")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=873935405]
+modulate = Color(0, 0, 0, 0.24705882)
+z_index = -3
+texture = ExtResource("5_5u6hq")
 
 [node name="Shield" type="Node2D" parent="." unique_id=1185072165]
 script = ExtResource("2_g2els")
@@ -31,10 +42,10 @@ shape = SubResource("RectangleShape2D_u8vuu")
 position = Vector2(70, 0)
 texture = ExtResource("4_dqkch")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1391303977]
-shape = SubResource("RectangleShape2D_qhqgy")
+[node name="Gun" type="Node2D" parent="." unique_id=1133994708]
+script = ExtResource("6_d4qa6")
+bullet_scene = ExtResource("7_ss7kx")
 
-[node name="Background" type="Sprite2D" parent="." unique_id=873935405]
-modulate = Color(0, 0, 0, 0.24705882)
-z_index = -3
-texture = ExtResource("5_5u6hq")
+[node name="Sprite2D" type="Sprite2D" parent="Gun" unique_id=1965877620]
+position = Vector2(37, 0)
+texture = ExtResource("8_dnykm")
