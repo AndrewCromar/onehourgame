@@ -2,16 +2,16 @@ extends Node2D
 
 @export var enemy_scene : PackedScene
 
-const SPAWN_RATE : float = 1.0
-
 const SPWAN_RADIUS : float = 300
 
 var counter : float = 0
+var time : float = 0
 
 func _process(delta: float) -> void:
+	time += delta
 	counter -= delta
 	if counter <= 0:
-		counter = SPAWN_RATE
+		counter = 1.0 / _difficulty_curve(time)
 		_spawn_enemy()
 
 func _spawn_enemy() -> void:
@@ -21,3 +21,6 @@ func _spawn_enemy() -> void:
 	var enemy = enemy_scene.instantiate()
 	enemy.position = point
 	add_child(enemy)
+
+func _difficulty_curve(x : float) -> float:
+	return ((-cos(x) + 1.5) / 3.0) * (2.0 ** (x / 50.0))
