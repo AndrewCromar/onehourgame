@@ -1,5 +1,6 @@
 # TODO
 
+- [ ] Make a better name for the game.
 - [ ] Powerups (faster shoot, more bullets per shot, slow down time, hearts).
 - [ ] Display player health in a cool way.
 - [ ] Build and put on ONYX website and stuff (maybe steam eventually).

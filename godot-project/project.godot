@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="One Hour Game"
-config/description="Made this game in one hour(ish).s"
-config/version="v1.1"
+config/description="Made this game in one hour(ish)."
+config/version="v1.2"
 run/main_scene="uid://d2lt5cxds81t4"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/bg_color=Color(0.14117648, 0.14117648, 0.14117648, 1)
