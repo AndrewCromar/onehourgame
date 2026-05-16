@@ -24,7 +24,7 @@ func _on_area_entered(area: Area2D) -> void:
 		queue_free()
 
 func _die() -> void:
-	player.add_score()
+	Global.score += 1
 	
 	_spawn_particles()
 	

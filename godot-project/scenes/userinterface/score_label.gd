@@ -7,4 +7,4 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	text = str(player.get_score())
+	text = str(Global.score)

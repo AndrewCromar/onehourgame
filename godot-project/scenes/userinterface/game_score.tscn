@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bdgakrc0qeequ"]
 
 [ext_resource type="FontFile" uid="uid://g5p5nkkwfkjv" path="res://fonts/Pix32.ttf" id="1_2ddky"]
-[ext_resource type="Script" uid="uid://ca5cb3nnifxvy" path="res://scenes/userinterface/score_lebel.gd" id="2_7qscd"]
+[ext_resource type="Script" uid="uid://ca5cb3nnifxvy" path="res://scenes/userinterface/score_label.gd" id="2_7qscd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7qscd"]
 font = ExtResource("1_2ddky")

@@ -20,6 +20,10 @@ boot_splash/use_filter=false
 boot_splash/image="uid://bi7p0x4jldemq"
 config/icon="uid://bi7p0x4jldemq"
 
+[autoload]
+
+Global="*uid://dyr68s1gqjnsx"
+
 [display]
 
 window/size/mode=3

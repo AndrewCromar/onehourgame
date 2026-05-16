@@ -5,7 +5,12 @@
 [ext_resource type="Texture2D" uid="uid://b7oiv8ktcr8y3" path="res://assets/gameoverimage.png" id="2_lhhpp"]
 [ext_resource type="Texture2D" uid="uid://clhbukbka81qx" path="res://assets/button.png" id="3_b5488"]
 [ext_resource type="Script" uid="uid://cjfjmx42u30md" path="res://scenes/userinterface/restart_button.gd" id="4_fqvu8"]
+[ext_resource type="Script" uid="uid://ca5cb3nnifxvy" path="res://scenes/userinterface/score_label.gd" id="4_gwkfl"]
 [ext_resource type="Script" uid="uid://dw2ubc3irre3f" path="res://scenes/userinterface/menu_button.gd" id="4_w5lia"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_b5488"]
+font = ExtResource("2_gwkfl")
+font_size = 30
 
 [sub_resource type="Theme" id="Theme_dw7gw"]
 default_font = ExtResource("2_gwkfl")
@@ -63,6 +68,23 @@ layout_mode = 2
 [node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer" unique_id=493644080]
 layout_mode = 2
 texture = ExtResource("2_lhhpp")
+
+[node name="Lebel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1870548908]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Final Score:"
+label_settings = SubResource("LabelSettings_b5488")
+
+[node name="Score" type="Label" parent="CenterContainer/VBoxContainer" unique_id=528085204]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "0"
+label_settings = SubResource("LabelSettings_b5488")
+script = ExtResource("4_gwkfl")
+
+[node name="Container" type="Container" parent="CenterContainer/VBoxContainer" unique_id=1830138575]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
 
 [node name="Restart" type="Button" parent="CenterContainer/VBoxContainer" unique_id=715518365]
 custom_minimum_size = Vector2(200, 40)

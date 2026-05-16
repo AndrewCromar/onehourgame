@@ -11,11 +11,5 @@ func take_damage(amount: int):
 	if health <= 0:
 		die()
 
-func add_score():
-	score += 1
-
-func get_score() -> int:
-	return score
-
 func die():
-	get_tree().call_deferred("change_scene_to_file", game_over_scene)
+	get_tree().call_deferred("change_scene_to_file", game_over_scene) # pass score?
