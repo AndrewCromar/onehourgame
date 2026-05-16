@@ -2,8 +2,11 @@ extends Area2D
 
 const SPEED = 100
 
+var player : Area2D
+
 func _ready() -> void:
 	area_entered.connect(_on_area_entered)
+	player = get_tree().get_first_node_in_group("player")
 
 func _process(delta: float) -> void:
 	position = position.move_toward(Vector2.ZERO, SPEED * delta)
@@ -21,8 +24,10 @@ func _on_area_entered(area: Area2D) -> void:
 		queue_free()
 
 func _die() -> void:
+	player.add_score()
+	
 	_spawn_particles()
-		
+	
 	var camera = get_tree().root.find_child("CameraContainer", true, false)
 	if camera:
 		camera.shake()
