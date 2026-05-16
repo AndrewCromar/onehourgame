@@ -5,8 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://haljvlmlbxvo" path="res://assets/credit.png" id="2_0wbv4"]
 [ext_resource type="Texture2D" uid="uid://d4apdttiuquhp" path="res://assets/titleimage.png" id="2_3o2ra"]
 [ext_resource type="Texture2D" uid="uid://clhbukbka81qx" path="res://assets/button.png" id="3_sdjm6"]
-[ext_resource type="Script" uid="uid://bbxc7wxyhbgun" path="res://scenes/userinterface/start_button.gd" id="4_s54lf"]
+[ext_resource type="Script" uid="uid://bbxc7wxyhbgun" path="res://scenes/userinterface/load_scene_button.gd" id="4_s54lf"]
 [ext_resource type="Script" uid="uid://b07iy8emld74j" path="res://scenes/userinterface/quit_button.gd" id="6_3o2ra"]
+[ext_resource type="AudioStream" uid="uid://c8xsj8wtvov64" path="res://sounds/click.wav" id="7_q7neo"]
 
 [sub_resource type="Theme" id="Theme_dw7gw"]
 default_font = ExtResource("1_f1dpf")
@@ -97,7 +98,10 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_0wbv4")
 theme_override_styles/focus = SubResource("StyleBoxTexture_q7neo")
 text = "Start Game"
 script = ExtResource("4_s54lf")
-game_scene = "res://scenes/world.tscn"
+scene = "uid://cm4aftjwe5wi4"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CenterContainer/VBoxContainer/Start" unique_id=324178925]
+stream = ExtResource("7_q7neo")
 
 [node name="Quit" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1402366574]
 custom_minimum_size = Vector2(200, 40)
@@ -111,3 +115,6 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_0wbv4")
 theme_override_styles/focus = SubResource("StyleBoxTexture_q7neo")
 text = "Quit"
 script = ExtResource("6_3o2ra")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CenterContainer/VBoxContainer/Quit" unique_id=935571792]
+stream = ExtResource("7_q7neo")

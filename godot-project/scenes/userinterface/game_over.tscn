@@ -4,9 +4,10 @@
 [ext_resource type="FontFile" uid="uid://g5p5nkkwfkjv" path="res://fonts/Pix32.ttf" id="2_gwkfl"]
 [ext_resource type="Texture2D" uid="uid://b7oiv8ktcr8y3" path="res://assets/gameoverimage.png" id="2_lhhpp"]
 [ext_resource type="Texture2D" uid="uid://clhbukbka81qx" path="res://assets/button.png" id="3_b5488"]
-[ext_resource type="Script" uid="uid://cjfjmx42u30md" path="res://scenes/userinterface/restart_button.gd" id="4_fqvu8"]
 [ext_resource type="Script" uid="uid://ca5cb3nnifxvy" path="res://scenes/userinterface/score_label.gd" id="4_gwkfl"]
-[ext_resource type="Script" uid="uid://dw2ubc3irre3f" path="res://scenes/userinterface/menu_button.gd" id="4_w5lia"]
+[ext_resource type="Script" uid="uid://bbxc7wxyhbgun" path="res://scenes/userinterface/load_scene_button.gd" id="6_gwkfl"]
+[ext_resource type="AudioStream" uid="uid://c8xsj8wtvov64" path="res://sounds/click.wav" id="7_b5488"]
+[ext_resource type="AudioStream" uid="uid://d4hq52a71nyjn" path="res://sounds/gameOver.wav" id="8_b5488"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_b5488"]
 font = ExtResource("2_gwkfl")
@@ -97,8 +98,11 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_3o2ra")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_0wbv4")
 theme_override_styles/focus = SubResource("StyleBoxTexture_q7neo")
 text = "Restart"
-script = ExtResource("4_fqvu8")
-game_scene = "res://scenes/world.tscn"
+script = ExtResource("6_gwkfl")
+scene = "uid://cm4aftjwe5wi4"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CenterContainer/VBoxContainer/Restart" unique_id=651572553]
+stream = ExtResource("7_b5488")
 
 [node name="Menu" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1632327101]
 custom_minimum_size = Vector2(200, 40)
@@ -111,5 +115,12 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_3o2ra")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_0wbv4")
 theme_override_styles/focus = SubResource("StyleBoxTexture_q7neo")
 text = "Menu"
-script = ExtResource("4_w5lia")
-menu_scene = "res://scenes/userinterface/menu.tscn"
+script = ExtResource("6_gwkfl")
+scene = "uid://d2lt5cxds81t4"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CenterContainer/VBoxContainer/Menu" unique_id=1474226009]
+stream = ExtResource("7_b5488")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=761249739]
+stream = ExtResource("8_b5488")
+autoplay = true

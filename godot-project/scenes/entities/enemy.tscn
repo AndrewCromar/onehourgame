@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://chuhrns84wer0"]
 
 [ext_resource type="Script" uid="uid://rqmrjksbg5uv" path="res://scenes/entities/enemy.gd" id="1_md0e3"]
+[ext_resource type="AudioStream" uid="uid://cqveydbai0gk8" path="res://sounds/explosion.wav" id="2_4fpkd"]
 [ext_resource type="Texture2D" uid="uid://b1ipvb680jlmx" path="res://assets/enemy.png" id="2_md0e3"]
+[ext_resource type="AudioStream" uid="uid://dppxb22yw5rl4" path="res://sounds/explosion(1).wav" id="3_wqw0c"]
+[ext_resource type="AudioStream" uid="uid://b1mxkicogqi1y" path="res://sounds/explosion(2).wav" id="4_onntj"]
+[ext_resource type="AudioStream" uid="uid://c47uro3rkex75" path="res://sounds/explosion(3).wav" id="5_h7bdk"]
+[ext_resource type="AudioStream" uid="uid://cyptio43vv06b" path="res://sounds/explosion(4).wav" id="6_1kl1a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_md0e3"]
 
@@ -11,6 +16,7 @@ colors = PackedColorArray(0.6745098, 0.19607843, 0.19607843, 1, 0.6745098, 0.196
 
 [node name="Enemy" type="Area2D" unique_id=1928511462]
 script = ExtResource("1_md0e3")
+death_sounds = Array[AudioStream]([ExtResource("2_4fpkd"), ExtResource("3_wqw0c"), ExtResource("4_onntj"), ExtResource("5_h7bdk"), ExtResource("6_1kl1a")])
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1206238114]
 z_index = -1
@@ -36,3 +42,5 @@ initial_velocity_max = 100.0
 color_ramp = SubResource("Gradient_67neu")
 hue_variation_min = 0.36
 hue_variation_max = 0.36
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=880777343]

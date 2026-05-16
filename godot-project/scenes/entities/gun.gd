@@ -1,6 +1,8 @@
 extends Node2D
 
 @export var bullet_scene : PackedScene
+@export var shoot_sounds : Array[AudioStream] = []
+@onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
 
 var FIRE_RATE : float = 0.5
 
@@ -19,3 +21,11 @@ func _shoot() -> void:
 	bullet.position = position + Vector2.RIGHT.rotated(rotation) * 37
 	bullet.rotation = rotation
 	get_parent().add_child(bullet)
+	
+	_play_random_shoot_sound()
+
+
+func _play_random_shoot_sound() -> void:
+	var random_index = randi() % shoot_sounds.size()
+	audio_player.stream = shoot_sounds[random_index]
+	audio_player.play()
